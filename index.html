@@ -63,17 +63,107 @@
             </div>
         </div>
     </nav>
+
+
+
+
     <!-- Hero Section -->
-    <div class="flex flex-row w-full mx-auto bg-background">
-        <div class="w-1/2 my-auto">
-            <h1 class="text-2xl xl:text-3xl text-center text-main mb-10 mt-5">WELCOME TO THE WEBSITE</h1>
-            <p class="text-xs xl:text-base text-primary mx-10 text-center antialiased">velit minima dolorum quibusdam iste magnam quasi vitae neque est vel magni necessitatibus in in veniam vel commodi 
-                maiores laudantium ducimus et assumenda magni ducimus magni maiores nesciunt eos et debitis adipisci ipsam enim vel suscipit enim dolores officia error eaque molestias et non
-                et temporibus tenetur molestiae voluptates debitis beatae nostrum deleniti sunt natus alias aspernatur qui quis quaerat veniam repudiandae 
-                alias ut et consequatur maxime aut debitis vero recusandae quis quod maiores voluptatem voluptates et dolor omnis ipsum</p>
+    <div class="w-full relative">
+        <!-- slide 1 -->
+        <div id="slide1" class="flex flex-row w-full mx-auto bg-background">
+            <div class="w-1/2 my-auto">
+                <h1 class="text-2xl xl:text-3xl text-center text-main mb-10 mt-5">WELCOME TO THE WEBSITE</h1>
+                <p class="text-xs xl:text-base text-primary mx-10 text-center antialiased">velit minima dolorum
+                    quibusdam
+                    iste magnam quasi vitae neque est vel magni necessitatibus in in veniam vel commodi
+                    maiores laudantium ducimus et assumenda magni ducimus magni maiores nesciunt eos et debitis adipisci
+                    ipsam enim vel suscipit enim dolores officia error eaque molestias et non
+                    alias ut et consequatur maxime aut debitis vero recusandae quis quod maiores voluptatem voluptates
+                    et
+                    dolor omnis ipsum</p>
+            </div>
+            <div class="w-1/2 bg-primary"><img src="./assets/slide1.png" alt="slide1"></div>
         </div>
-        <div class="w-1/2 bg-primary"><img src="./assets/slide1.png" alt="slide1"></div>
+        <!-- slide 2 -->
+        <div id="slide2" class="hidden flex flex-row w-full mx-auto bg-background">
+            <div class="w-1/2 my-auto">
+                <h1 class="text-2xl xl:text-3xl text-center text-main mb-10 mt-5">WHO WE ARE?</h1>
+                <p class="text-xs xl:text-base text-primary mx-10 text-center antialiased">dolor tempora voluptates qui
+                    et
+                    reprehenderit eaque eaque nam quia quas nulla tempora necessitatibus
+                    dolor et ut recusandae quaerat magnam expedita error aut corporis quaerat quis deserunt quos optio
+                    quos
+                    tempore quia ut incidunt nisi sit placeat nesciunt animi et quis
+                    temporibus minima eius est impedit quia laborum qui debitis dolor animi ratione aspernatur dolores
+                    dolorum rerum a voluptatem quia ut non pariatur ex sed corrupti accusamus
+                    ut dignissimos eum est qui assumenda est error ut vitae et quo consequuntur inventore enim labore
+                </p>
+            </div>
+            <div class="w-1/2 bg-primary"><img src="./assets/slide1.png" alt="slide1"></div>
+        </div>
+        <!-- slide 3 -->
+        <div id="slide3" class="hidden flex flex-row w-full mx-auto bg-background">
+            <div class="w-1/2 my-auto">
+                <h1 class="text-2xl xl:text-3xl text-center text-main mb-10 mt-5">WHAT WE DO</h1>
+                <p class="text-xs xl:text-base text-primary mx-10 text-center antialiased">in tempore dolorum totam
+                    porro
+                    amet recusandae occaecati at placeat
+                    accusamus quis debitis vero iusto amet in id voluptates quia earum exercitationem alias sed eveniet
+                    repudiandae suscipit sequi</p>
+            </div>
+            <div class="w-1/2 bg-primary"><img src="./assets/slide1.png" alt="slide1"></div>
+        </div>
+        <div class="flex flex-row absolute bottom-0 w-full justify-center">
+            <svg class="fill-main" height="20" width="20" id="dot1">
+                <circle cx="10" cy="10" r="5" />
+            </svg>
+            <svg class="fill-secondary" height="20" width="20" id="dot2">
+                <circle cx="10" cy="10" r="5" />
+            </svg>
+            <svg class="fill-secondary" height="20" width="20" id="dot3">
+                <circle cx="10" cy="10" r="5" />
+            </svg>
+        </div>
     </div>
+
+
+
+    <!-- script for slider -->
+    <script>
+        var slides = [], dots = [], activeIndex = 0;
+        slides.push(document.getElementById("slide1"));
+        slides.push(document.getElementById("slide2"));
+        slides.push(document.getElementById("slide3"));
+        dots.push(document.getElementById("dot1"));
+        dots.push(document.getElementById("dot2"));
+        dots.push(document.getElementById("dot3"));
+        
+        setInterval(changeSlide, 4000);
+
+        function changeSlide() {
+            //for changing slides
+            for (const [index, slide] of slides.entries()) {
+                if (index === activeIndex || index === activeIndex + 1)
+                    slide.classList.toggle("hidden")
+                if (index === 2 && activeIndex === 2)
+                    slides[0].classList.toggle("hidden")
+            }
+            // for changing dots
+            for (const [index, dot] of dots.entries()) {
+                if (index === activeIndex || index === activeIndex + 1){
+                    dot.classList.toggle("fill-main")
+                    dot.classList.toggle("fill-secondary")
+                }
+                if (index === 2 && activeIndex === 2){
+                    dots[0].classList.toggle("fill-main")
+                    dots[0].classList.toggle("fill-secondary")
+                }
+            }
+            activeIndex === 2 ? activeIndex = 0 : activeIndex++;
+        }
+    </script>
+
+    <!-- About Us Section -->
 </body>
 
 </html>
