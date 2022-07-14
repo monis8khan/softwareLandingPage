@@ -68,7 +68,8 @@
 
 
     <!-- Hero Section -->
-    <div class="w-full relative">
+    <section class="w-full relative">
+
         <!-- slide 1 -->
         <div id="slide1" class="flex flex-row w-full mx-auto bg-background">
             <div class="w-1/2 my-auto">
@@ -124,7 +125,7 @@
                 <circle cx="10" cy="10" r="5" />
             </svg>
         </div>
-    </div>
+    </section>
 
 
 
@@ -137,7 +138,7 @@
         dots.push(document.getElementById("dot1"));
         dots.push(document.getElementById("dot2"));
         dots.push(document.getElementById("dot3"));
-        
+
         setInterval(changeSlide, 4000);
 
         function changeSlide() {
@@ -150,11 +151,11 @@
             }
             // for changing dots
             for (const [index, dot] of dots.entries()) {
-                if (index === activeIndex || index === activeIndex + 1){
+                if (index === activeIndex || index === activeIndex + 1) {
                     dot.classList.toggle("fill-main")
                     dot.classList.toggle("fill-secondary")
                 }
-                if (index === 2 && activeIndex === 2){
+                if (index === 2 && activeIndex === 2) {
                     dots[0].classList.toggle("fill-main")
                     dots[0].classList.toggle("fill-secondary")
                 }
@@ -164,6 +165,26 @@
     </script>
 
     <!-- About Us Section -->
+    <section class="flex flex-col container mx-auto text-center my-10">
+        <h1 class="text-primary text-4xl font-bold p-5">
+            ABOUT US
+        </h1>
+        <img src="https://www.logolynx.com/images/logolynx/90/90cdeb260df361a39d97540d9c75a814.png" class="h-40 mx-auto"
+            alt="Reboot Logo" />
+        <span class="self-center text-sm md:text-base text-primary p-10 px-10 md:px-20 lg:px-40">dolor tempora
+            voluptates
+            qui et
+            reprehenderit eaque eaque nam quia quas nulla tempora necessitatibus dolor et ut recusandae quaerat magnam
+            expedita error aut corporis quaerat quis deserunt quos optio quos tempore quia ut incidunt nisi sit placeat
+            nesciunt animi et quis temporibus minima eius est impedit quia laborum qui debitis dolor animi ratione
+            aspernatur dolores dolorum rerum a voluptatem quia ut non pariatu</span>
+        <a href="#"
+            class="bg-primary text-base font-bold text-background hover:text-primary hover:bg-background px-4 py-2 mx-auto rounded-3xl">Contact
+            Us</a>
+    </section>
+    
+    <!-- services section -->
+
 </body>
 
 </html>
