@@ -9,8 +9,8 @@ module.exports = {
         },
         colors: {
             // background: "#2E0249",
-            // main: "#F806CC",
-            // primary: "#A91079",
+            // main: "#A91079",
+            // primary: "#F806CC",
             // secondary: "#570A57"
             // background: "#1B515E",
             // main: "#ABCD9E",
