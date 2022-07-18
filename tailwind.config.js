@@ -12,14 +12,14 @@ module.exports = {
             // main: "#A91079",
             // primary: "#F806CC",
             // secondary: "#570A57"
-            // background: "#1B515E",
-            // main: "#ABCD9E",
-            // primary: "#88B990",
-            // secondary: "#338275"
-            background: "#495C83",
-            main: "#A8A4CE",
-            primary: "#C8B6E2",
-            secondary: "#7A86B6"
+            background: "#1B515E",
+            main: "#ABCD9E",
+            primary: "#88B990",
+            secondary: "#338275"
+            // background: "#495C83",
+            // main: "#A8A4CE",
+            // primary: "#C8B6E2",
+            // secondary: "#7A86B6"
         },
         fontFamily: {
           sans: ['Graphik', 'sans-serif'],
